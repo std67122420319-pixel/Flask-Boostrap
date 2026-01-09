@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{title}}</h1>
+    <hr>
+    <div class="card">
+      <div class="card-header bg-danger text-light">
+        <h4>เพิ่มข้อมูลรถยนต์</h4>
+      </div>
+      <div class="card-body bg-light">
+        <form method="post" >
+          <div class="mb-3">
+            <label for="brand" class="form-label">ยี่ห้อรถยนต์</label>
+            <input name="brand" type="text" class="form-control" id="brand">
+          </div>
+          <div class="mb-3">
+            <label for="model" class="form-label">รุ่นรถยนต์</label>
+            <input name="model" type="text" class="form-control" id="model">
+          </div>
+          <div class="mb-3">
+            <label for="year" class="form-label">ปีที่ผลิต</label>
+            <input name="year" type="number" class="form-control" id="year">
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">ราคา</label>
+            <input name="price" type="number" class="form-control" id="price">
+          </div>
+          <button type="submit" class="btn btn-outline-danger">
+            <i class="bi bi-car-front-fill"></i>
+            บันทึก
+          </button>
+        </form>
+    </div>
+  
+{% endblock %}
