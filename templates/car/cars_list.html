@@ -1,0 +1,29 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Model</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for car in cars %}
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td>{{car.brand}}</td>
+        <td>{{car.model}}</td>
+        <td>
+          <a href="{{url_for('edit_car', id=car.id)}}" class="btn btn-outline-primary btn-sm">
+            <i class="bi bi-pencil-square"></i>
+            Edit
+          </a>
+          <a href="{{url_for('delete_car', id=car.id)}}" class="btn btn-outline-danger btn-sm">
+            <i class="bi bi-journal-x"></i>
+            Delete
+          </a>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

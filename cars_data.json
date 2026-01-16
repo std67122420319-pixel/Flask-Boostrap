@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "brand": "ToToyaaa",
+    "model": "supa kubota",
+    "year": 2077,
+    "price": 9999999999
+  },
+  {
+    "id": 2,
+    "brand": "ToToyaaa",
+    "model": "wave",
+    "year": 1990,
+    "price": 99454546
+  },
+  {
+    "id": 3,
+    "brand": "honya",
+    "model": "toshiba",
+    "year": 8900,
+    "price": 676767676
+  },
+  {
+    "id": 4,
+    "brand": "honya",
+    "model": "gta 5",
+    "year": 2018,
+    "price": 400
+  },
+  {
+    "id": 5,
+    "brand": "kubota",
+    "model": "papayapokpok",
+    "year": 1890,
+    "price": 20
+  },
+  {
+    "id": 6,
+    "brand": "kubota",
+    "model": "cityo",
+    "year": 2020,
+    "price": 556660
+  },
+  {
+    "id": 7,
+    "brand": "nissannnnnnnnn",
+    "model": "sgayline",
+    "year": 2000,
+    "price": 999999999999999
+  },
+  {
+    "id": 8,
+    "brand": "masdaAMD",
+    "model": "rx580",
+    "year": 2015,
+    "price": 4000
+  },
+  {
+    "id": 9,
+    "brand": "nissannnnnnnnn",
+    "model": "GTA 6",
+    "year": 2026,
+    "price": 1800
+  },
+  {
+    "id": 10,
+    "brand": "Misumiji yaa",
+    "model": "rtx6090",
+    "year": 2027,
+    "price": 1500000
+  }
+]

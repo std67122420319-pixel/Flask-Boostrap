@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{title}}</h1>
+    <hr>
+    <div class="card">
+      <div class="card-header bg-warning text-dark">
+        <h4>แก้ไขข้อมูลรถยนต์</h4>
+      </div>
+      <div class="card-body bg-light">
+        <form method="post" >
+          <div class="mb-3">
+            <label for="id" class="form-label">รหัสรถยนต์</label>
+            <input name="id" type="text" class="form-control" id="id" value="{{car.id}}" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="brand" class="form-label">ยี่ห้อรถยนต์</label>
+            <input name="brand" type="text" class="form-control" id="brand" value="{{car.brand}}" required>
+          </div>
+          <div class="mb-3">
+            <label for="model" class="form-label">รุ่นรถยนต์</label>
+            <input name="model" type="text" class="form-control" id="model" value="{{car.model}}" required>
+          </div>
+          <div class="mb-3">
+            <label for="year" class="form-label">ปีที่ผลิต</label>
+            <input name="year" type="number" class="form-control" id="year" value="{{car.year}}" required>
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">ราคา</label>
+            <input name="price" type="number" class="form-control" id="price" value="{{car.price}}" required>
+          </div>
+          <button type="submit" class="btn btn-outline-primary">
+            <i class="bi bi-pencil-square"></i>
+            บันทึก
+          </button>
+          <a href="{{url_for('show_cars')}}" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i>
+            ยกเลิก
+          </a>
+        </form>
+    </div>
+  
+{% endblock %}

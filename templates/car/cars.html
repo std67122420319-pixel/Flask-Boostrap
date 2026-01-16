@@ -8,40 +8,26 @@
   <div class="container">
     <h1>{{title}}</h1>
     <hr>
-    <div class="row">
+    <div class="row mb-3">
       <div class="col">
-        
+        <input type="text" 
+               name="search"
+               id="searchInput" 
+               class="form-control" 
+               placeholder="ค้นหารถยนต์ (ยี่ห้อ หรือ รุ่น)"
+               hx-get="{{url_for('search_cars')}}"
+               hx-target="#carsTable"
+               hx-trigger="keyup changed delay:500ms">
       </div>
       <div class="col">
-        <a href="{{ url_for('new_car') }}" class="btn btn-outline-danger float-end">
+        <a href="{{url_for('new_car')}}" class="btn btn-outline-success float-end">
           <i class="bi bi-car-front-fill"></i>
-          Add Car
+          New Car
         </a>
+      </div>
     </div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Brand</th>
-          <th scope="col">Model</th>
-          <th scope="col">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for car in cars %}
-        <tr>
-          <th scope="row">{{loop.index}}</th>
-          <td>{{car.brand}}</td>
-          <td>{{car.model}}</td>
-          <td>
-            
-          </td>
-        </tr>
-        {% endfor %}
-        
-      </tbody>
-  </table>
+    <div id="carsTable">
+      {% include 'car/cars_list.html' %}
+    </div>
   </div>
-  
-  
 {% endblock %}
